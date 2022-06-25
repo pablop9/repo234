@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <!-- Project from https://start.vaadin.com/project/cac86bec-68e5-42cc-a5a1-2c8c72647a31 -->
-    <groupId>ufv.dis2010.final</groupId>
+    <groupId>ufv.dis2010.finale</groupId>
     <artifactId>gam</artifactId>
     <name>GAM</name>
     <version>1.0-SNAPSHOT</version>

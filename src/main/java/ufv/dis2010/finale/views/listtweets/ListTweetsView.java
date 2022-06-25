@@ -11,6 +11,8 @@ import ufv.dis2010.finale.model.Tweet;
 import ufv.dis2010.finale.model.Tweets;
 import ufv.dis2010.finale.views.MainLayout;
 
+import java.util.Locale;
+
 /**
  * Vista "principal" que muestra la lista de tweets
  */
@@ -142,7 +144,7 @@ public class ListTweetsView extends VerticalLayout {
         //La columna de la fecha tiene que aparecer con el pretty time este de mierda
         //Lo que hago es decirle que en esa columna, para cada tweet, me vas a formatear su fecha de
         //ultima actualizacion utilizando prettytime, por último, a esa columna la vas a llamar LastUpdated
-        grid.addColumn(tweet -> new PrettyTime().format(tweet.getLastUpdated())).setHeader("LastUpdated");
+        grid.addColumn(tweet -> new PrettyTime().setLocale(Locale.ENGLISH).format(tweet.getLastUpdated())).setHeader("LastUpdated");
 
         //por ultimo digo que cada columna tenga automatice su anchura para no tener que preocuparme yo
         grid.getColumns().forEach(col -> col.setAutoWidth(true));

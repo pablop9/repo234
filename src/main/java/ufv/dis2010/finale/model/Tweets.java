@@ -5,6 +5,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -70,7 +71,7 @@ public class Tweets {
             tweets.add(tweetToUpdate);
         }
 
-        //updateJsonFile();
+        updateJsonFile();
         return true;
     }
 
@@ -109,18 +110,18 @@ public class Tweets {
     /**
      * Vuelca la lista en el fichero json para así llevar un control de la misma
      */
-/*    private void updateJsonFile(){
+    private void updateJsonFile(){
         Resource tweetsFile = new ClassPathResource("tweets.json");
         String json = new GsonBuilder().setDateFormat("DD-MM-YYYY").create().toJson(tweets.toArray());
 
         try {
             PrintWriter writer = new PrintWriter(tweetsFile.getFile());
-            writer.write(json);
+            writer.println(json);
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }*/
+    }
 
     public ArrayList<Tweet> getTweets() {
         return tweets;
